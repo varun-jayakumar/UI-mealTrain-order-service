@@ -4,7 +4,7 @@ MealTrain is a full stack end-to-end web application that enables customers and 
 
 Note There is a Backend to this application with is currently private for security reasons. Please request to get the backend code.
 
-### check out the app at [MealTrain](https://app.netlify.com/sites/varun-meal-train/deploys)
+### check out the app at [MealTrain](https://varun-meal-train.netlify.app/auth/login)
 
 ## 🛠️ Installation
 
