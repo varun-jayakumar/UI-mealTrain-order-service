@@ -1,4 +1,4 @@
-import DashboardLayout from "../../components/provider/Layouts/DashboardLayout.";
+import DashboardLayout from "../../components/provider/layouts/DashboardLayout";
 import ProfileSection from "../../components/provider/ProfileSection";
 function Profile(props) {
   return (
