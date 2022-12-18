@@ -1,9 +1,0 @@
-/* using each to generate  float property class for each direction*/
-$float-directions: (fLeft: left, fRight: right);
-@each $key, $value in $float-directions 
-{
-  .float-#{$value} 
-  {
-   float: $value;
-  }
-}
