@@ -20,7 +20,7 @@ import { updateUserDetailsId } from "../../../store/auth";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify'
 
-const Maps = dynamic(() => import("../../Map"), {ssr:false});
+const Maps = dynamic(() => import("../../map"), {ssr:false});
 
 interface Values {
   streetName: string;

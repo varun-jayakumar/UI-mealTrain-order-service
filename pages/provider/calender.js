@@ -1,4 +1,4 @@
-import DashboardLayout from "../../components/provider/Layouts/DashboardLayout";
+import DashboardLayout from "../../components/provider/layouts/DashboardLayout";
 
 function Calender(props) {
   return <div>Your are in Calender Page</div>;
