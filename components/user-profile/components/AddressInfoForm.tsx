@@ -17,10 +17,10 @@ import FileBase64 from "react-file-base64";
 import dynamic from "next/dynamic";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { updateUserDetailsId } from "../../../store/auth";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
-const Maps = dynamic(() => import("../../Map"), {ssr:false});
+const Maps = dynamic(() => import("../../map"), { ssr: false });
 
 interface Values {
   streetName: string;
@@ -82,7 +82,7 @@ const AddressInfoForm = ({
         }
         user = await dispatch(updateUserDetails(userObj));
         const result = unwrapResult(user);
-      toast.success("Profile updated successfully!",{ autoClose: 5000 })
+        toast.success("Profile updated successfully!", { autoClose: 5000 });
       } else {
         user = await dispatch(addUserDetails(userObj));
         const result = unwrapResult(user);
@@ -91,16 +91,17 @@ const AddressInfoForm = ({
             userDetailsId: result.id,
           })
         );
-        toast.success("Profile created successfully!" ,{ autoClose: 5000 })
+        toast.success("Profile created successfully!", { autoClose: 5000 });
       }
-     
 
       dispatch(
         formStageAction(3) // update formStage
       );
-    } catch (err : any) {
+    } catch (err: any) {
       console.log(err);
-      toast.error("Something went wrong. Please try again",{ autoClose: 2000 });
+      toast.error("Something went wrong. Please try again", {
+        autoClose: 2000,
+      });
     }
   };
 
@@ -152,8 +153,6 @@ const AddressInfoForm = ({
   });
 
   return (
-
-
     <div>
       <Formik
         initialValues={initialValues}
@@ -209,7 +208,10 @@ const AddressInfoForm = ({
                           </div>
                         </div>
                         <div>
-                          <label htmlFor="aptNo" className="block form-label font-bold">
+                          <label
+                            htmlFor="aptNo"
+                            className="block form-label font-bold"
+                          >
                             {role == "student"
                               ? "Apartment Number"
                               : "Building Number"}
@@ -238,7 +240,10 @@ const AddressInfoForm = ({
                       </div>
                       <div className="grid grid-cols-2 gap-16 mt-1">
                         <div>
-                          <label htmlFor="city" className="block form-label font-bold">
+                          <label
+                            htmlFor="city"
+                            className="block form-label font-bold"
+                          >
                             City
                           </label>
                           <div className="relative">
@@ -260,11 +265,13 @@ const AddressInfoForm = ({
                                 {errors.city}
                               </span>
                             )}
-  
                           </div>
                         </div>
                         <div>
-                          <label htmlFor="state" className="block form-label font-bold">
+                          <label
+                            htmlFor="state"
+                            className="block form-label font-bold"
+                          >
                             State
                           </label>
                           <div className="relative">
@@ -292,7 +299,10 @@ const AddressInfoForm = ({
 
                       <div className="grid grid-cols-2 gap-16 mt-1">
                         <div>
-                          <label htmlFor="zipcode" className="block form-label font-bold">
+                          <label
+                            htmlFor="zipcode"
+                            className="block form-label font-bold"
+                          >
                             Zip Code
                           </label>
                           <div className="relative">
@@ -368,18 +378,12 @@ const AddressInfoForm = ({
                         )}
 
                         {existingUser && (
-                          <button
-                          
-                          className="p-2  w-[200px]   font-700 text-[18px] text-white transition-colors duration-200 transform bg-[#f5b011] rounded-md hover:bg-[#d36a19] focus:outline-none focus:bg-[#d36a19]"
-                          >
+                          <button className="p-2  w-[200px]   font-700 text-[18px] text-white transition-colors duration-200 transform bg-[#f5b011] rounded-md hover:bg-[#d36a19] focus:outline-none focus:bg-[#d36a19]">
                             Update Details
                           </button>
                         )}
                         {!existingUser && (
-                          <button
-                           
-                          className="p-2  w-[200px]   font-700 text-[18px] text-white transition-colors duration-200 transform bg-[#f5b011] rounded-md hover:bg-[#d36a19] focus:outline-none focus:bg-[#d36a19]"
-                          >
+                          <button className="p-2  w-[200px]   font-700 text-[18px] text-white transition-colors duration-200 transform bg-[#f5b011] rounded-md hover:bg-[#d36a19] focus:outline-none focus:bg-[#d36a19]">
                             Submit Details
                           </button>
                         )}
