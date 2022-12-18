@@ -1,5 +1,5 @@
-import DashboardLayout from "../../components/provider/Layouts/DashboardLayout.js";
-import ProfileSection from "../../components/provider/ProfileSection.js";
+import DashboardLayout from "../../components/provider/Layouts/DashboardLayout.";
+import ProfileSection from "../../components/provider/ProfileSection";
 function Profile(props) {
   return (
     <div>
