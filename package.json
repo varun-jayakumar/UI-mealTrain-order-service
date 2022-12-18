@@ -1,6 +1,6 @@
 {
   "private": true,
-  "baseURL": "https://backend-mealtrain-order-service-production.up.railway.app/",
+  "baseURL": "https://backend-mealtrain-order-service-production.up.railway.app/mealtrain/",
   "scripts": {
     "dev": "next dev -p 3005",
     "build": "next build",
