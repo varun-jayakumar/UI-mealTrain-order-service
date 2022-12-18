@@ -1,10 +1,11 @@
 {
   "private": true,
-  "baseURL": "http://backendmealtrainapi-env.eba-5pvm8wmc.us-east-1.elasticbeanstalk.com/mealtrain/",
+  "baseURL": "https://backend-mealtrain-order-service-production.up.railway.app/",
   "scripts": {
     "dev": "next dev -p 3005",
     "build": "next build",
-    "start": "next start -p 3005"
+    "start": "next start -p 3005",
+    "export": "next export"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.1",

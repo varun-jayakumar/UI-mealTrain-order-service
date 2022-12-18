@@ -4,7 +4,7 @@ import createAuthRefreshInterceptor from "axios-auth-refresh";
 // Create axios instance.
 const axiosInstance = axios.create({
   baseURL:
-    "http://backendmealtrainapi-env.eba-5pvm8wmc.us-east-1.elasticbeanstalk.com/mealtrain/",
+    "https://backend-mealtrain-order-service-production.up.railway.app/",
   // baseURL: "http://localhost:8080/mealtrain/",
   withCredentials: true,
 });
