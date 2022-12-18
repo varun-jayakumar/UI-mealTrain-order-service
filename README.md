@@ -8,6 +8,8 @@ Note There is a Backend to this application with is currently private for securi
 
 ## 🛠️ Installation
 
+please make sure you have a node environment setup in your machine. if not please refer how to install at [NodeJs](https://nodejs.org/en/)
+
 ```
 npm install
 ```
