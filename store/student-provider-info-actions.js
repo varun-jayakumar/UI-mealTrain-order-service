@@ -4,17 +4,13 @@ import { studentCartActions } from "./student-cart-slice.js";
 export const fetchProvider = (providerId, studentId) => {
   return async (dispatch) => {
     const fetchProviderHandler = async (providerId) => {
-      const res = await fetch(
-        `providers/${providerId}`
-      );
+      const res = await fetch(`providers/${providerId}`);
       const data = await res.json();
       return data;
     };
 
     const fetchStudentcart = async (studentId) => {
-      const res = await fetch(
-        `hstudents/${studentId}/cart/`
-      );
+      const res = await fetch(`students/${studentId}/cart/`);
       const data = await res.json();
       console.log(data);
       return data;
